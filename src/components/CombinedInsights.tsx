@@ -53,87 +53,87 @@ const CombinedInsights: React.FC<CombinedInsightsProps> = ({ selectedProvince })
   };
 
   // Buying Insights Charts
-  const ShareOfWalletChart = () => {
-    const data = {
-      labels: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
-      datasets: [
-        {
-          label: 'User Index',
-          data: [0.75, 0.98, 1.05, 1.08, 1.1, 1.1],
-          backgroundColor: '#FF9E00', // Orange color
-          borderColor: '#FF9E00',
-          borderWidth: 0,
-        },
-        {
-          label: 'Brand Index',
-          data: [0.65, 0.9, 1.02, 1.02, 1.05, 1.05],
-          backgroundColor: '#D0009C', // Magenta color
-          borderColor: '#D0009C',
-          borderWidth: 0,
-        }
-      ],
-    };
+  // const ShareOfWalletChart = () => {
+  //   const data = {
+  //     labels: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
+  //     datasets: [
+  //       {
+  //         label: 'User Index',
+  //         data: [0.75, 0.98, 1.05, 1.08, 1.1, 1.1],
+  //         backgroundColor: '#FF9E00', // Orange color
+  //         borderColor: '#FF9E00',
+  //         borderWidth: 0,
+  //       },
+  //       {
+  //         label: 'Brand Index',
+  //         data: [0.65, 0.9, 1.02, 1.02, 1.05, 1.05],
+  //         backgroundColor: '#D0009C', // Magenta color
+  //         borderColor: '#D0009C',
+  //         borderWidth: 0,
+  //       }
+  //     ],
+  //   };
 
-    const options = {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: true,
-          position: 'top' as const,
-          labels: {
-            font: {
-              size: 10
-            },
-            padding: 8
-          }
-        },
-      },
-      scales: {
-        x: {
-          title: {
-            display: true,
-            text: 'Age groups',
-            font: {
-              size: 10,
-              weight: 500
-            }
-          },
-          grid: {
-            display: false,
-          },
-          ticks: {
-            font: {
-              size: 9
-            }
-          }
-        },
-        y: {
-          title: {
-            display: true,
-            text: 'User index',
-            font: {
-              size: 10,
-              weight: 500
-            }
-          },
-          beginAtZero: true,
-          max: 1.25,
-          grid: {
-            color: '#f5f6fa',
-          },
-          ticks: {
-            font: {
-              size: 9
-            },
-            stepSize: 0.25
-          }
-        },
-      },
-    };
+  //   const options = {
+  //     responsive: true,
+  //     maintainAspectRatio: false,
+  //     plugins: {
+  //       legend: {
+  //         display: true,
+  //         position: 'top' as const,
+  //         labels: {
+  //           font: {
+  //             size: 10
+  //           },
+  //           padding: 8
+  //         }
+  //       },
+  //     },
+  //     scales: {
+  //       x: {
+  //         title: {
+  //           display: true,
+  //           text: 'Age groups',
+  //           font: {
+  //             size: 10,
+  //             weight: 500
+  //           }
+  //         },
+  //         grid: {
+  //           display: false,
+  //         },
+  //         ticks: {
+  //           font: {
+  //             size: 9
+  //           }
+  //         }
+  //       },
+  //       y: {
+  //         title: {
+  //           display: true,
+  //           text: 'User index',
+  //           font: {
+  //             size: 10,
+  //             weight: 500
+  //           }
+  //         },
+  //         beginAtZero: true,
+  //         max: 1.25,
+  //         grid: {
+  //           color: '#f5f6fa',
+  //         },
+  //         ticks: {
+  //           font: {
+  //             size: 9
+  //           },
+  //           stepSize: 0.25
+  //         }
+  //       },
+  //     },
+  //   };
 
-    return <Bar data={data} options={options} />;
-  };
+  //   return <Bar data={data} options={options} />;
+  // };
 
   const PurchaseBehaviorChart = () => {
     const data = {
@@ -536,50 +536,50 @@ const CombinedInsights: React.FC<CombinedInsightsProps> = ({ selectedProvince })
   };
 
   // Watching Insights Charts
-  const ShareOfVoiceChart = () => {
-    const data = {
-      labels: ['Our Brand', 'Competitor A', 'Others'],
-      datasets: [
-        {
-          label: 'Share of Voice (%)',
-          data: [35, 25, 40],
-          backgroundColor: [
-            '#8e44ad',
-            '#3498db',
-            '#e74c3c'
-          ],
-          borderWidth: 0,
-        }
-      ],
-    };
+  // const ShareOfVoiceChart = () => {
+  //   const data = {
+  //     labels: ['Our Brand', 'Competitor A', 'Others'],
+  //     datasets: [
+  //       {
+  //         label: 'Share of Voice (%)',
+  //         data: [35, 25, 40],
+  //         backgroundColor: [
+  //           '#8e44ad',
+  //           '#3498db',
+  //           '#e74c3c'
+  //         ],
+  //         borderWidth: 0,
+  //       }
+  //     ],
+  //   };
 
-    const options = {
-      indexAxis: 'y' as const,
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false,
-        },
-      },
-      scales: {
-        x: {
-          beginAtZero: true,
-          max: 100,
-          grid: {
-            color: '#f5f6fa',
-          },
-        },
-        y: {
-          grid: {
-            display: false,
-          },
-        },
-      },
-    };
+  //   const options = {
+  //     indexAxis: 'y' as const,
+  //     responsive: true,
+  //     maintainAspectRatio: false,
+  //     plugins: {
+  //       legend: {
+  //         display: false,
+  //       },
+  //     },
+  //     scales: {
+  //       x: {
+  //         beginAtZero: true,
+  //         max: 100,
+  //         grid: {
+  //           color: '#f5f6fa',
+  //         },
+  //       },
+  //       y: {
+  //         grid: {
+  //           display: false,
+  //         },
+  //       },
+  //     },
+  //   };
 
-    return <Bar data={data} options={options} />;
-  };
+  //   return <Bar data={data} options={options} />;
+  // };
 
   const MediaConsumptionChart = () => {
     // Media names for Y-axis
