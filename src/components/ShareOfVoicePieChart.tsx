@@ -1,14 +1,10 @@
 import React from 'react';
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-} from 'chart.js';
+import { Chart as ChartJS, registerables } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import { Card, Typography, Box } from '@mui/material';
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+// Register all Chart.js controllers, elements, scales, and plugins
+ChartJS.register(...registerables);
 
 interface ShareOfVoicePieChartProps {
   selectedProvince?: string | null;

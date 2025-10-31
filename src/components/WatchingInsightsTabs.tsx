@@ -7,29 +7,11 @@ import {
   Tab,
   Divider,
 } from '@mui/material';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  LineElement,
-  PointElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
+import { Chart as ChartJS, registerables } from 'chart.js';
 import { Bar, Line } from 'react-chartjs-2';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  LineElement,
-  PointElement,
-  Title,
-  Tooltip,
-  Legend
-);
+// Register all Chart.js controllers, elements, scales, and plugins
+ChartJS.register(...registerables);
 
 interface WatchingInsightsTabsProps {
   selectedProvince?: string | null;
